@@ -1,6 +1,6 @@
 var { sidebar, nav } = require('./sidebar')
 module.exports = {
-  base: '/blog/',
+  base: '/daily-code/',
   title: '花花的blog',
   description: 'Python linux c++ nodejs git 前端',
   themeConfig: {
