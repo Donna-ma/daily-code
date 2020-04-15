@@ -12,18 +12,19 @@ rootDirs.forEach(navText => {
   sidebar[navLink] = []
   nav.push({ text: navText, link: navLink })
   var moduleDirs = fs.readdirSync(absNavPath)
+  console.log('module', moduleDirs);
 
   moduleDirs.forEach(m => {
-
+    var subPath = path.resolve(absNavPath, m)
+    if (fs.statSync(subPath).isFile()) return
     var obj = {
       title: m,
-      collapsable: true,
+      collapsable: false,
       children: [
       ]
     }
     sidebar[navLink].push(obj)
-    var subPath = path.resolve(absNavPath, m)
-    if (fs.statSync(subPath).isFile()) return
+
     var files = fs.readdirSync(subPath)
 
     files.forEach(_ => {
