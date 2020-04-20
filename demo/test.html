@@ -4,15 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>donna ma's book</title>
+    <title>Document</title>
 </head>
 
 <body>
-    
-    <script type="text/javascript" src="./test"> </script>
 
-    
-    <button class="class1" onclick="sayHello('小红')">小红</button>
+    <input id="input1"></input>
+    <input id="input2"></input>
+    <button onclick="sayhello ('点我关注')">点我关注</button>
+    <div id="txt">点击按钮之后，改变我的文字</div>
+
+    <script>
+        function sayhello(name) {
+            var a = document.querySelector('#input1')
+            var b = document.querySelector('#input2')
+            var c = document.querySelector('#txt')
+            var valueOfA = Number(a.value)
+            var valueOfB = Number(b.value)
+
+            if ( !isNaN(valueOfA) && !isNaN(valueOfB) ) {
+                c.textContent = (valueOfA + valueOfB)
+            } else {
+                c.textContent = 0
+            }
+            }
+
+    </script>
 
 </body>
 
