@@ -35,12 +35,6 @@
         }
     </style>
 
-    <script>
-        var a = document.querySelector(".输入框1")
-        var b = document.querySelector(".输入框2")
-        var c = document.querySelector("#btn")
-        
-    </script>
 </head>
 
 <body>
@@ -53,13 +47,29 @@
 
         <div>
             <span class="label">密码</span>
-            <input class="输入框2" />
+            <input type="color" class="输入框2" />
         </div>
 
-        <button id="btn">提交</button>
+        <button id="btn" ; onclick=" commit() ">提交</button>
 
     </div>
 
+    <script>
+        var a = document.querySelector(".输入框1")
+        var b = document.querySelector(".输入框2")
+        var c = document.querySelector("#btn")
+
+        function commit() {
+            alert(`
+
+            账号是：  ${a.value}
+            密码是： ${b.value}  
+
+
+            ` )
+
+        }
+    </script>
+
 </body>
 
-</html>
