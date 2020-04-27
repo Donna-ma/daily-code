@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 相对定位：相对自己 */
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .relative {
+            /* position: relative; */
+            left: 50px;
+            background: slateblue;
+        }
+
+        .absolute {
+            /* position: absolute; */
+            background: darkcyan;
+            bottom: 50px;
+        }
+
+        .fixed {
+            /* position:fixed; */
+            top: 100px;
+            background: steelblue;
+        }
+    </style>
+</head>
+
+<body style="position:relative;height:100vh">
+    <div class="box relative">
+
+    </div>
+    <div style="position:relative; height: 500px;width: 500px;border:1px solid slategray;">
+        <div class="box absolute">
+
+        </div>
+        
+    </div>
+    <div class="box fixed">
+
+    </div>
+
+</body>
+
+</html>
