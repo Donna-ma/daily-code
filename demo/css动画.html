@@ -1,31 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-       .box1{
-           width: 100px;
-           height:100px;
-           background:skyblue;
-           position: relative;
-           animation: 动画1 5s ;
-       }
-       @keyframes 动画1 {
+        .box {
+            width: 200px;
+            height: 100px;
+        }
 
-            0%   {background:red; left:0px; top:0px;}
-	        25%  {background:yellow; left:200px; top:0px;}
-	        50%  {background:blue; left:200px; top:200px;}
-	        75%  {background:green; left:0px; top:200px;}
-	        100% {background:red; left:0px; top:0px;}
-       }
+        .fa {
+
+            /* background: ; */
+            position: relative;
+            border: 1px red dashed;
+            overflow: hidden;
+
+        }
+
+        .div1 {
+            background: skyblue;
+        }
+
+        .div2 {
+            background: gold;
+        }
+
+        .div3 {
+            background: greenyellow;
+        }
+
+        .son {
+            display: inline-block;
+        }
+        
+        .center {
+            width: 600px;
+            height: 100px;
+            position: relative;
+            animation: moveToLeft 3s infinite;
+        }
+        @keyframes moveToLeft {
+            0% {left: 0;}
+            25% {left: -200px;}
+            50% {left: -400px;}
+            70% {left: -200px;}
+            100% {left: -0;}
+        }
     </style>
 </head>
+
 <body>
-    <div class="box1">
+    <div class="fa box">
+
+        <div class="center">
+            <div class="box div1 son"> </div><div class="box div2 son"> </div><div class="box div3 son"> </div>
+
+        </div>
 
     </div>
 
 </body>
+
 </html>

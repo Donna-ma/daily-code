@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .win {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            
+        }
+        #container{
+            width: 300px;
+            height: 100px;
+            position: relative;
+            animation: moveUpDown 3s infinite;
+        }
+        .son1{
+            background-color: khaki;display: inline-block;
+        }
+        .son2{
+            background-color: lavenderblush;display: inline-block;
+        }
+        .son3{
+            background-color: lightblue;display: inline-block;
+        }
+        @keyframes moveUpDown {
+            0%   {left:0}
+            25%  {left:-100px}
+            50%  {left:-200px}
+            70%  {left:-100px}
+            100% {left:0}
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div class=" win ">
+        <div id ="container">
+            <div class="win son1"> </div><div class="win son2"></div><div class="win son3"></div>
+
+        </div>
+
+    </div>
+</body>
+</html>
