@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .win {
+            width: 1024px;
+            height: 576px;
+            overflow: hidden;
+
+        }
+
+        #container {
+            width: 3072px;
+            height: 576px;
+            position: relative;
+            transition: all 1s;
+            /* animation: moveUpDown 3s infinite; */
+        }
+
+        .son1 {
+            background-color: sandybrown;
+            display: inline-block;
+            background-image: url(./images/1.jpg);
+            background-size: contain
+        }
+
+        .son2 {
+            background-color: violet;
+            display: inline-block;
+            background-image: url(./images/2.png);
+            background-size: contain
+        }
+
+        .son3 {
+            background-color: teal;
+            display: inline-block;
+            background-image: url(./images/3.jpg);
+            background-size: contain
+        }
+
+        /* @keyframes moveUpDown {
+            0%   {left:0}
+            25%  {left:-100px}
+            50%  {left:-200px}
+            70%  {left:-100px}
+            100% {left:0}
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div style="display:flex">
+        <button id="leftBtn" onclick=" moveLeft() "> &lt; </button>
+        <div class=" win " style="margin:0 auto;">
+            <div id="container">       
+                 <div class="win son1"></div><div class="win son2"></div><div class="win son3"></div>
+            </div>
+        </div>
+        <button id="rigthBtn" onclick=" moveRigth() "> &gt; </button>
+    </div>
+
+    <script>
+        var con = document.querySelector('#container')
+        var value = 0
+        var width = 1024
+        function moveLeft() {
+            if (value <= -2 * width) {
+                value = 0;
+            } else {
+                value = value - width;
+            }
+            con.style.transform = `translateX(${value}px)`;
+        }
+        function moveRigth() {
+            if (value >= 0) {
+                value = -2048;
+            }else{
+                value = value + width;
+            }
+            con.style.transform = `translateX(${value}px)`;
+        }
+
+    </script>
+</body>
+
+</html>
