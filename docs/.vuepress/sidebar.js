@@ -12,7 +12,6 @@ rootDirs.forEach(navText => {
   sidebar[navLink] = []
   nav.push({ text: navText, link: navLink })
   var moduleDirs = fs.readdirSync(absNavPath)
-  console.log('module', moduleDirs);
 
   moduleDirs.forEach(m => {
     var subPath = path.resolve(absNavPath, m)
@@ -33,10 +32,11 @@ rootDirs.forEach(navText => {
       obj.children.push([m + '/' + name, name])
     })
     obj.children.sort((a, b) => (parseInt(a[1]) - parseInt(b[1])) || 1)
-    // console.log(obj)
+    
 
   })
-
+  sidebar[navLink] = sidebar[navLink].sort((a, b) => (parseInt(a.title) - parseInt(b.title)) || 1)
+  
 })
 
 
